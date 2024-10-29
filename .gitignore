@@ -7,3 +7,8 @@ Pandas/creditcard.csv
 /Pandas2/프로젝트2/AutogluonModels
 /Pandas2/프로젝트2/은행이탈고객
 /Pandas2/프로젝트2
+*.json
+LLM/bert_ckpt/models--bert-base-multilingual-cased/blobs/2ba5de7675473164e07f3b3531748c9a6f113a2c
+/LLM/bert_ckpt
+LLM/KorSTS.zip
+LLM/word2vec-nlp-tutorial.zip
