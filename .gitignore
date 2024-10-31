@@ -12,3 +12,4 @@ LLM/bert_ckpt/models--bert-base-multilingual-cased/blobs/2ba5de7675473164e07f3b3
 /LLM/bert_ckpt
 LLM/KorSTS.zip
 LLM/word2vec-nlp-tutorial.zip
+*.pt

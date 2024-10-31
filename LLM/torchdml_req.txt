@@ -1,0 +1,7 @@
+torchml
+gdown
+transformers<=4.30.2
+pandas
+jupyter
+ipywidgets
+sklearn
