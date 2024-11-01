@@ -13,3 +13,8 @@ LLM/bert_ckpt/models--bert-base-multilingual-cased/blobs/2ba5de7675473164e07f3b3
 LLM/KorSTS.zip
 LLM/word2vec-nlp-tutorial.zip
 *.pt
+LLM/gpt_ckpt/tf_model.h5
+LLM/20241101_1_zero_shot,_one_shot,_few_shot_프롬프트_이해_및_적용.ipynb:Zone.Identifier
+LLM/data.zip
+LLM/gpt_ckpt.zip
+LLM/gpt_ckpt/gpt2_kor_tokenizer.spiece
