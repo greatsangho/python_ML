@@ -56,7 +56,7 @@ tiktoken==0.5.1
 tokenizers==0.14.0
 torch==2.0.0
 torch-directml==0.2.0.dev230426
-transformers==4.34.0
+transformers==4.46.1
 typing_extensions==4.5.0
 wandb==0.15.10
 xgboost==2.0.0
