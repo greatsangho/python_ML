@@ -12,6 +12,7 @@ gluonnlp==0.10.0
 graphviz<0.9.0
 huggingface-hub==0.26.2
 hyperopt==0.2.7
+imbalanced-learn==0.12.4
 jupyter==1.1.1
 jupyterlab==4.2.5
 kaggle==1.5.16
