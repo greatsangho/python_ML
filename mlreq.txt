@@ -49,7 +49,7 @@ shap==0.42.0
 soynlp==0.0.493
 soyspacing==1.0.17
 spacy==3.6.1
-SQLAlchemy==2.0.21
+SQLAlchemy==2.0.36
 statsmodels==0.14.0
 tensorflow-cpu==2.10
 tensorflow-directml-plugin==0.4.0.dev230202
