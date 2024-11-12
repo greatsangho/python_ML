@@ -40,5 +40,6 @@ tensorflow-cpu==2.10.0
 tensorflow-directml-plugin==0.4.0.dev230202
 tokenizers==0.20.1
 torch-directml==0.2.5.dev240914
+urllib3==2.2.3
 wget==3.2
 xgboost==2.1.2
