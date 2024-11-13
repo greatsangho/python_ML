@@ -28,6 +28,7 @@ nltk==3.9.1
 notebook==7.2.2
 numpy==1.23.1
 openai==1.54.3
+opencv-python==4.10.0.84
 pandas==2.2.3
 PyMySQL==1.1.1
 pypdf==5.1.0
@@ -40,6 +41,7 @@ tensorflow-cpu==2.10.0
 tensorflow-directml-plugin==0.4.0.dev230202
 tokenizers==0.20.1
 torch-directml==0.2.5.dev240914
+transformers==4.46.2
 urllib3==2.2.3
 wget==3.2
 xgboost==2.1.2
