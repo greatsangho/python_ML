@@ -1,0 +1,30 @@
+.match {
+    color: green;
+}
+
+.mismatch {
+    color: red;
+}
+
+/* login.html */
+.error-message {
+    color: red;
+}
+
+/* welcome.html */
+.welcome-message {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+.profile-info {
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+.btn-logout {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <!-- 부트스트랩 CSS 링크 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- 외부 CSS 파일 링크 -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    
+</head>
+<body>
+
+    <div class="container my-5">
+        <h1 class="text-center mb-4">SKT 헬스장 가입 신청서</h1>
+
+        <form id="myForm" onsubmit="handleSubmit(event)">
+            <!-- 텍스트 입력 -->
+            <div class="row mb-3">
+                <label for="text" class="col-sm-2 col-form-label">닉네임 (필수):</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="text" name="text" placeholder="텍스트를 입력하세요" required>
+                </div>
+            </div>
+
+            <!-- 이메일 입력 -->
+            <div class="row mb-3">
+                <label for="email" class="col-sm-2 col-form-label">이메일 입력 (필수):</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="이메일을 입력하세요" required>
+                </div>
+            </div>
+
+            <!-- 비밀번호 입력 -->
+            <div class="row mb-3">
+                <label for="password" class="col-sm-2 col-form-label">비밀번호 입력 (필수):</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="비밀번호를 입력하세요" required oninput="onPasswordChange()">
+                </div>
+            </div>
+
+            <!-- 비밀번호 확인 -->
+            <div class="row mb-3">
+                <label for="confirmPassword" class="col-sm-2 col-form-label">비밀번호 확인 (필수):</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="비밀번호를 다시 입력하세요" required oninput="checkPasswordMatch()">
+                    <span id="passwordMessage" class="form-text"></span>
+                </div>
+            </div>
+
+            <!-- 성별 -->
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label">성별 (필수):</label>
+                <div class="col-sm-10">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="male" name="gender" value="male" required>
+                        <label class="form-check-label" for="male">남성</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="female" name="gender" value="female" required>
+                        <label class="form-check-label" for="female">여성</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 취미 -->
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label">취미:</label>
+                <div class="col-sm-10">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="reading" name="hobby" value="reading">
+                        <label class="form-check-label" for="reading">독서</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="sports" name="hobby" value="sports">
+                        <label class="form-check-label" for="sports">운동</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="music" name="hobby" value="music">
+                        <label class="form-check-label" for="music">음악 듣기</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 제출 버튼 -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">제출</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- 부트스트랩 JS, Popper.js, Bootstrap Bundle JS 링크 -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <!-- 외부 JS 파일 링크 -->
+    <script src="../js/script.js"></script>
+</body>
+</html>
