@@ -6,6 +6,9 @@ from langchain.chat_models import ChatOpenAI
 from sklearn.metrics.pairwise import cosine_similarity
 from langchain.embeddings import OpenAIEmbeddings
 
+import os
+os.environ['OPENAI_API_KEY']='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'
+
 
 def extract_question_intent_and_keywords(user_input):
     import re
