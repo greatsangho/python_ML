@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비동기 예제 3</title>
+</head>
+<body>
+    <h1>시군구와 행정동 콤보박스</h1>
+    <button id="loadCities">시군구 로드</button>
+    <select id="citySelect" style="margin-top: 20px; width: 200px;">
+        <option value="">시/군/구를 선택하세요</option>
+    </select>
+    <select id="districtSelect" style="margin-top: 20px; width: 200px;" disabled>
+        <option value="">행정동을 선택하세요</option>
+    </select>
+    <div id="status" style="margin-top: 20px; font-family: Arial, sans-serif;"></div>
+</body>
+<script>
+    const cityData = ["서울", "부산", "대구", "광주"];
+        const districtData = {
+            "서울": ["강남구", "서초구", "종로구", "중구"],
+            "부산": ["해운대구", "사하구", "부산진구", "동래구"],
+            "대구": ["수성구", "달서구", "중구", "동구"],
+            "광주": ["북구", "동구", "서구", "남구"]
+        };
+        // 시군구를 로드하는 비동기 함수
+        async function loadcities() {
+            status.textContent = '시군구 데이터 로드중입니다.';
+            // 데이터를 가져오고 있다고 가정하고 2초간 지연
+            await new Promise(x => setTimeout(x, 2000))
+            // 콤보박스 초기화 및 데이터 추가
+            citySelect.innerHTML = '<option value="">시/군/구를 선택하세요</option>'
+            citiData.forEach(city=>{
+                const option = document.createElement('optinon');
+                option.value = city;
+                option.textContent = city;
+                citySelect.appendChild(option);
+            });
+            status.textContent = '시군구 데이터 로드완료'
+        }
+</script>
+</html>
