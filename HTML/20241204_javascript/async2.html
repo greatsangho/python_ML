@@ -7,27 +7,28 @@
 </head>
 <body>
     <h1>async 와 await 비교</h1>
-    <button id="withAwait">Await와 함께 동작</button>
-    <button id="withoutAwait">Await 없이 동작</button>
+    <button id = 'withAwait'>Await와 함게 동작</button>
+    <button id = 'withOutAwait'>Await 없이 동작</button>
     <div id="result"></div>
 </body>
 <script>
     const result = document.getElementById('result');
+    
     // 비동기 작업 2초마다
-    // Promise 비동기 작업의 결과를 나중에 처리할 수 있도록
+    // Promise 비동기 작업의 결과를 나중에 처리할 수 있도록 
     // 약속을 제공하는 객체
-    // Promise를 사용하려면 then, await를 사용
+    // Promise를 사용하려면 ***then, await***  를 사용
     function delayTask(){
         return new Promise(x =>{
             setTimeout(() => {
                 x('task complete')
             }, 2000);
-        })
-    }
+        })        
+    } 
 
-    delayTask().then(x=>{
-        result.textContent = x;
-    });
+    // delayTask().then(x=>{
+    //     result.textContent = x;
+    // });
 
     async function runWithAwait() {
         result.textContent = 'await를 사용해서 작업이 끝날때 까지 기다림';
@@ -48,22 +49,6 @@
     }
     const button2 = document.getElementById('withOutAwait');
     button2.addEventListener('click',runWithOutAwait);
-
-    function twosecTask(){
-        setTimeout(() => {
-            alert('2초 후에 실행되는 결과창입니다.');
-        }, 2000);
-    }
-    
-    function repecTask(){
-        setInterval(() => {
-            alert('2초 후에 실행되는 결과창입니다.');
-        }, 2000);
-    }
-
-    result.textContent = delayTask();
-    // result.textContent = twosecTask();
-    // result.textContent = repsecTask();
-
 </script>
+
 </html>

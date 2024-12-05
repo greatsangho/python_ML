@@ -1,22 +1,28 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자바스크립트</title>
+    <title>뉴스검색</title>
 </head>
 <body>
-    <h1 id ="title"> 제목 </h1>
-    <button id = "btn">제목을 변경합니다</button>
+    <input type="text" id="query">
+    <button id="btn">검색</button>
+    <p id="news"></p>
 </body>
-
 <script>
-    const title = document.getElementById('title')
-    const button = document.getElementById('btn')
-    // 이벤트 추가
-    button.addEventListener('click',()=>{
-        title.textConstent = '제목 변경';
-        title.style.color = 'blue';
+    const button = document.getElementById('btn');
+    const news = document.getElementById('news');    
+    button.addEventListener('click', async ()=>{        
+        news.innerHTML = '';
+        const query = document.getElementById('query').value.trim();
+        const response = await fetch(`/news?query=${encodeURIComponent(query)}`);
+        const data = await response.json()
+        data.items.forEach(item => {
+            const newitem = document.createElement('div');
+            newitem.innerHTML = item.title;
+            news.appendChild(newitem);
+        });
     })
 </script>
 </html>
