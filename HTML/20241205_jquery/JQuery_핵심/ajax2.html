@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="js/jquyery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#myForm").submit(function(e){
+            e.preventDefault();  // 기본동작을 방지(폼 제출기능 방지)
+            let title = $("#title").val();
+            let body = $("#body").val();
+            $.ajax({
+                url : 'https://jsonplaceholder.typicode.com/posts',
+                type : 'post',
+                contentType: 'application/json',
+                data : JSON.stringify({
+                    title:title,
+                    body:body,
+                    userId: 1
+                }),
+                success:function(data){
+                    $("#result").html("성공" + data.id);
+                },
+                error:function(){
+                    $("#result").html("실패");
+                }
+            });
+        })
+
+    });
+</script>
+
+<body>
+    <form id="myForm">
+        <p>
+            <label>제목</label>
+            <input type="text" id="title" name="title" required>
+        </p>
+        <p>
+            <label>내용</label>
+            <input type="text" id="body" name="body" required>
+        </p>
+        <button type="submit">제출</button>
+    </form>
+    <div id="result"></div>
+</body>
+</html>

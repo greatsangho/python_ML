@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트처리</title>
+</head>
+<script src = 'static/js/jquyery.min.js'></script>
+<script>
+    $(document).ready(function(){
+        $("#changeText").click(function(){
+            alert('버튼클릭 이벤트 발생');
+        })
+    });
+</script>
+
+<body>
+    <h1 id="title">title</h1>
+    <button id = 'changeText'>Change Text</button>
+</body>
+</html>

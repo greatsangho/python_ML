@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 이벤트 처리</title>
+</head>
+<script src = "js/jquyery.min.js"></script>
+<style>
+    #box {
+        width:100px;
+        height:100px;
+        background-color: blue;
+    }
+</style>
+
+<script>
+    $(document).ready(function(){
+        $("#btn").hover(
+            function(){ $(this).text('마우스오버') },
+            function(){$(this).text('버튼')}
+        );
+        $("#btn").click(function(){
+            alert("버튼 클릭");
+        });
+        $("#animation").click(function(){
+            $("#box").animate({
+                width: "200px",
+                height:"200px",
+                opacity:0.5
+            }, 2000);
+        });
+    })
+</script>
+<body>
+    <button id="btn">버튼</button>
+    <button id="animation">Animation</button>
+    <div id="box"></div>
+</body>
+</html>

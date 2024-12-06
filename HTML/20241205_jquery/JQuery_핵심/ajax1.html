@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src = 'js/jquyery.min.js'></script>
+<script>
+    $(document).ready(function(){
+        $("#load").click(function(){
+            $.ajax({
+                url : "https://jsonplaceholder.typicode.com/users",
+                type : 'GET',
+                success : function(data){
+                    let result = "";
+                    $.each(data, function(index, data){
+                        result += `<p>${data.name} : ${data.email}</p>`
+                    });
+                    $("#result").html(data.title);
+                },
+                error : function(){
+                    $("#result").html("데이터를 불어오는데 실패했습니다");
+                }
+            })
+        });
+    });
+</script>
+<body>
+    <button id="load">사용자 정보 불러오기</button>
+    <div id="result"></div>
+</body>
+</html>
