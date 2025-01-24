@@ -1,0 +1,55 @@
+pip install django
+pip install django-extensions
+pip install django-crispy-forms
+pip install django-markdownx
+pip install django-allauth
+
+
+allauth.account.middleware.AccountMiddleware
+
+pip install requests
+pip install PyJWT
+pip install cryptography
+
+git clone --branch sangho https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN05-4TH-1TEAM.git
+
+sudo apt-get update
+sudo apt-get remove docker docker-engine docker.io
+sudo apt install docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+docker --version
+sudo apt install docker-compose
+
+54.208.83.232 doitdjango.link www.doitdjango.link
+DATABASE=postgres
+
+FROM python:3.11-alpine
+RUN apk add --no-cache gcc musl-dev libffi-dev
+
+
+sudo docker-compose up -d --build
+sudo docker-compose exec web python manage.py makemigrations
+sudo docker-compose exec web python manage.py migrate
+
+sudo docker ps
+sudo docker exec -it <cont_ID> /bin/sh
+sudo docker exec -it 04477ebb3509 /bin/sh
+
+sudo docker-compose down
+sudo docker-compose up
+
+------------------------------------
+운전자보험 설명해줘
+
+pip install -U pip
+pip install django
+pip install chromadb
+pip install pymysql
+pip install python-decouple
+pip install langchain-community
+pip install pypdf
+pip install pypdf2
+pip install openai
+pip install scikit-learn
+pip install tiktoken
